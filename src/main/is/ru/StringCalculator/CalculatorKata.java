@@ -10,6 +10,16 @@ public class CalculatorKata
 	private static String[] splitNumbers(String numbers)
 	{
     	return numbers.split(",");
+	}
+
+	private static int sum(String[] numbers)
+	{
+		int total = 0;
+		for (String number: numbers)
+		{
+			total += toInt(number);
+		}
+		return total;
 	}	
 
 	public static int add(String text)
@@ -21,14 +31,9 @@ public class CalculatorKata
 
 		else if(text.contains(","))
 		{
-   			String[] numbers = text.split(",");
-    		int total = 0;
-    		for(String number : numbers)
-    		{
-        	total += toInt(number);
-    		}
-   		 return total;
-		}
+   			return sum(splitNumbers(text));	
+    	}
+   
 		else
 		return 1;
 
