@@ -16,6 +16,13 @@ public class CalculatorKataTest
 		assertEquals(0, CalculatorKata.add(""));
 	}
 
+	@Test
+	public void testOneNumber() 
+	{
+		assertEquals(1, CalculatorKata.add("1"));
+	}
+
+
 
 }
 
