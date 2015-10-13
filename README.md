@@ -1,0 +1,2 @@
+# StringCalculator
+Verkefni i hugbunadarfraedi
