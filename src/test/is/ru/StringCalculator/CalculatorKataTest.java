@@ -28,7 +28,11 @@ public class CalculatorKataTest
 		assertEquals(3, CalculatorKata.add("1,2"));
 	}
 
-
+	@Test
+	public void testMultibleNumbers() 
+	{
+		assertEquals(6, CalculatorKata.add("1,2,3"));
+	}
 
 
 }
