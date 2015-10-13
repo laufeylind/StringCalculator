@@ -5,17 +5,17 @@ import org.junit.Test;
 
 public class CalculatorKataTest
 {
-	CalculatorKata calculator = new CalculatorKata();
-	@Test
-	public void testEmptyString()
+	public static void main(String args[]) 
 	{
-		assertEquals (0, calculator.add(""));
+    	org.junit.runner.JUnitCore.main("is.ru.StringCalculator.CalculatorKataTest");
+    }
+	
+	@Test
+	public void testEmptyString() 
+	{
+		assertEquals(0, CalculatorKata.add(""));
 	}
 
-	@Test
-	public void testOneNumber()
-	{
-		assertEquals (1, calculator.add("1"));
-	}
+
 }
 
