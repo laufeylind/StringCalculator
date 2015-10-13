@@ -22,6 +22,13 @@ public class CalculatorKataTest
 		assertEquals(1, CalculatorKata.add("1"));
 	}
 
+	@Test
+	public void testTwoNumber() 
+	{
+		assertEquals(3, CalculatorKata.add("1,2"));
+	}
+
+
 
 
 }
