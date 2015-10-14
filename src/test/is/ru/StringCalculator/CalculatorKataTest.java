@@ -34,6 +34,13 @@ public class CalculatorKataTest
 		assertEquals(6, CalculatorKata.add("1,2,3"));
 	}
 
+	@Test
+	public void testNewLinesBetweenNumbers() 
+	{
+		assertEquals(10, CalculatorKata.add("5\n2,3"));
+	}
+
+
 
 }
 
