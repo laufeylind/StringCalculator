@@ -33,7 +33,14 @@ public class CalculatorKataTest
 	@Test
 	public void shouldReturnSumOfNumbersWithNewLinesBetweenNumbers(){
 		assertEquals(6, CalculatorKata.add("1\n2,3"));
-	}		
+	}
+
+	@Test
+	public void shouldReturnSumOfNumbersWithDifferentDilimeter(){
+		assertEquals(5, CalculatorKata.add("//;\n2;3"));
+	}
+
+			
 		
 	
 
