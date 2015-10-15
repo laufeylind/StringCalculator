@@ -9,14 +9,17 @@ public class CalculatorKata
 		}
 		else if(text.contains(",")){
 			String[] tokens = text.split(",");
-			return Integer.parseInt(tokens[0]) + Integer.parseInt(tokens[1]);
+			return toInt(tokens[0]) + toInt(tokens[1]);
 		}
 
 		else{
-			return Integer.parseInt(text);
+			return toInt(text);
 		}
 
 	}
 
+	private static int toInt(String text){
+		return Integer.parseInt(text);
+	}
 	
 }
