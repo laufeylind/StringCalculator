@@ -28,7 +28,12 @@ public class CalculatorKataTest
 	@Test
 	public void shouldReturnSumOfMultipleNumbers(){
 		assertEquals(6, CalculatorKata.add("1,2,3"));
-	}	
+	}
+
+	@Test
+	public void shouldReturnSumOfNumbersWithNewLinesBetweenNumbers(){
+		assertEquals(6, CalculatorKata.add("1\n2,3"));
+	}		
 		
 	
 

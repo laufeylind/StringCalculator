@@ -11,7 +11,7 @@ public class CalculatorKata
 			return 0;
 		}
 		else{
-			Stream<String> tokens = Arrays.stream(text.split(","));
+			Stream<String> tokens = Arrays.stream(text.split(",|\n"));
 			return tokens.mapToInt(Integer::parseInt).sum();
 		}
 			}
