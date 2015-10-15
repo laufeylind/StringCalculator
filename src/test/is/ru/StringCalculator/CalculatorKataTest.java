@@ -18,7 +18,13 @@ public class CalculatorKataTest
 	@Test
 	public void shouldReturnSameNumberWhenInputIsOneNumber(){
 		assertEquals(1, CalculatorKata.add("1"));
+	}
+
+	@Test
+	public void shouldReturnSumOfTwoNumbers(){
+		assertEquals(3, CalculatorKata.add("1,2"));
 	}	
+		
 	
 
 
