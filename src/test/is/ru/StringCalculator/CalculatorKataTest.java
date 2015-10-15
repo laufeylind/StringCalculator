@@ -11,6 +11,12 @@ public class CalculatorKataTest
     }
 	
 	@Test
+	public void shouldReturnZeroOnEmptyString (){
+		assertEquals(0, CalculatorKata.add(""));
+	}	
+
+
+	/*@Test
 	public void testEmptyString() 
 	{
 		assertEquals(0, CalculatorKata.add(""));
@@ -39,6 +45,13 @@ public class CalculatorKataTest
 	{
 		assertEquals(10, CalculatorKata.add("5\n2,3"));
 	}
+
+	/*@Test
+	public void testIfProgramSupportsDifferentDilemeters() 
+	{
+		assertEquals(10, CalculatorKata.add("//;\n2;8"));
+	}*/
+
 
 
 
