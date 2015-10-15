@@ -23,6 +23,11 @@ public class CalculatorKataTest
 	@Test
 	public void shouldReturnSumOfTwoNumbers(){
 		assertEquals(3, CalculatorKata.add("1,2"));
+	}
+
+	@Test
+	public void shouldReturnSumOfMultipleNumbers(){
+		assertEquals(6, CalculatorKata.add("1,2,3"));
 	}	
 		
 	

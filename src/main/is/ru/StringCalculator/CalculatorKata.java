@@ -1,5 +1,8 @@
 package is.ru.StringCalculator; 
 
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 public class CalculatorKata
 {
 	public static int add(String text){
@@ -7,19 +10,12 @@ public class CalculatorKata
 		if (text.isEmpty()){
 			return 0;
 		}
-		else if(text.contains(",")){
-			String[] tokens = text.split(",");
-			return toInt(tokens[0]) + toInt(tokens[1]);
-		}
-
 		else{
-			return toInt(text);
+			Stream<String> tokens = Arrays.stream(text.split(","));
+			return tokens.mapToInt(Integer::parseInt).sum();
 		}
+			}
 
-	}
-
-	private static int toInt(String text){
-		return Integer.parseInt(text);
-	}
+	
 	
 }
