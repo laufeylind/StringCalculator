@@ -38,7 +38,14 @@ public class CalculatorKataTest
 	@Test
 	public void shouldReturnSumOfNumbersWithDifferentDilimeter(){
 		assertEquals(5, CalculatorKata.add("//;\n2;3"));
+		assertEquals(5, CalculatorKata.add("//:\n4:1"));
 	}
+
+	/*@Test(expected = IllegalArgumentExeption.class)
+		public void throwsOnNegativeNumber(){
+			CalculatorKata.add("-3");
+		}*/
+	
 
 			
 		
