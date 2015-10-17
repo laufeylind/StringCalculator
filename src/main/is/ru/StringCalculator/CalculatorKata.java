@@ -1,7 +1,7 @@
 package is.ru.StringCalculator; 
 
 import java.util.Arrays;
-import java.util.stream.Stream;
+import java.util.stream.IntStream;
 
 public class CalculatorKata{
 
@@ -13,20 +13,6 @@ public class CalculatorKata{
 		this.numbers = numbers;
 	}
 
-	private int sum(){
-		return Arrays.stream(numbers.split(delimiter)) //create the stream
-		.mapToInt(Integer::parseInt) // map the stream to integer
-		.sum(); // sum of total. 
-	}
-
-	public static int add(String text){
-		if (text.isEmpty()){
-			return 0;
-		}
-		
-		return parseText(text).sum();
-	}
-
 	private static CalculatorKata parseText(String text){		
 		if (text.startsWith("//")){
 			String parts[] = text.split("\n", 2);
@@ -36,5 +22,25 @@ public class CalculatorKata{
 			return new CalculatorKata(",|\n", text);
 		}
 	}
+
+	private int sum(){
+		if(getNumber().anyMatch(n-> n<0)){
+			throw new IllegalArgumentException();
+		}
+		return getNumber().sum();
+	}
+
+	private IntStream getNumber(){
+		return Arrays.stream(numbers.split(delimiter)) //create the stream
+		.mapToInt(Integer::parseInt); // map the stream to integer
+	}
+
+	public static int add(String text){
+		if (text.isEmpty()){
+			return 0;
+		}
+		return parseText(text).sum();
+	}
+
 	
 }

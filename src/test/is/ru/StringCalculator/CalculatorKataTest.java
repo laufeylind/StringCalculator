@@ -2,6 +2,7 @@ package is.ru.StringCalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import static org.junit.Assert.fail;
 
 public class CalculatorKataTest
 {
@@ -41,10 +42,10 @@ public class CalculatorKataTest
 		assertEquals(5, CalculatorKata.add("//:\n4:1"));
 	}
 
-	/*@Test(expected = IllegalArgumentExeption.class)
+	@Test(expected = IllegalArgumentException.class)
 		public void throwsOnNegativeNumber(){
 			CalculatorKata.add("-3");
-		}*/
+		}
 	
 
 			
